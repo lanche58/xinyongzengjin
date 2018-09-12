@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天府（四川）信用增进股份有限公司</title>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<meta name="msapplication-navbutton-color" content="#4285f4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link href="css/iconfont.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="page-pa clearfix">
+        <a href="index.html" class="logo"><img src="images/logo.jpg" class="lgImg"></a>
+        <div class="r">
+            <div class="t">
+                <div class="search-box"><input type="text" placeholder="输入关键词搜索" class="s-input bsz"><a href="search.html" class="icon iconfont icon-31sousuo"></a></div>
+                <div class="lang-box"><a href="#" class="act">cn</a><a href="#">en</a></div>
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="news.html">资讯中心</a></li>
+                <li><a href="pro.html">业务介绍</a></li>
+                <li><a href="job.html">人力资源</a></li>
+                <li><a href="cta.html" class="act">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="menu-handler">
+    <span class="burger burger-1 mtrans"></span>
+    <span class="burger burger-2 mtrans"></span>
+    <span class="burger burger-3 mtrans"></span>
+</div>
+<div class="menuBlack cover"></div>
+<div class="menuBox">
+    <dl class="navMobile">
+        <dd><a href="index.html">首页</a></dd>
+        <dd><a href="about.html">关于我们</a>
+            <div class="mtv">
+                <a href="about.html?#ab1">公司简介</a>
+                <a href="about.html?#ab2">组织架构</a>
+                <a href="about.html?#ab3">资质荣誉</a>
+                <a href="about.html?#ab4">企业文化</a>
+            </div>
+        </dd>
+        <dd><a href="news.html">资讯中心</a>
+            <div class="mtv">
+                <a href="news.html">公司新闻</a>
+                <a href="news.html">行业新闻</a>
+                <a href="news.html">员工风采</a>
+                <a href="news.html">公示公告</a>
+            </div>
+        </dd>
+        <dd><a href="pro.html">业务介绍</a></dd>
+        <dd><a href="job.html">人力资源</a></dd>
+        <dd><a href="cta.html">联系我们</a></dd>
+    </dl>
+    <br><br>
+</div>
+
+<div class="mtop"></div>
+
+<div class="page-pa">
+    <div id="map"></div>
+    <div class="cta1">
+        <div class="cta-box">
+            <ul class="ctas-list pw">
+                <li class="item1"><div class="cta"><p><i class="icon iconfont icon-zuobiao"></i><strong>地址</strong><a href="#">成都高新区交子大道177号中国海国际中心A座18层</a></p></div></li>
+                <li><div class="cta"><p><i class="icon iconfont icon-youxiang1"></i><strong>邮编</strong>610041</p></div></li>
+                <li><div class="cta"><p><i class="icon iconfont icon-tel"></i><strong>电话</strong><a href="tel:02885323618" class="na">028-85323618（前台）</a></p></div></li>
+                <li class="item1"><div class="cta"><p><i class="icon iconfont icon-youxiang2"></i><strong>公司邮箱</strong><a href="#">028-85323618@sina.com</a></p></div></li>
+                <li><div class="cta"><p><i class="icon iconfont icon-chuanzhen"></i><strong>传真</strong>028-86057726</p></div></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<div class="footer">
+	<div class="pw clearfix">
+		<p class="f-cop">版权所有：天府（四川）信用增进股份有限公司<span>蜀ICP备 10001168号</span><a href="#">网站设计：赛门仕博</a></p>
+		<div class="f-tools">
+			<p><a href="link.html">友情链接</a></p>
+			<a href="#" class="icon iconfont icon-zuobiao"></a>
+			<a href="#" class="icon iconfont icon-youxiang1"></a>
+			<a href="img/ma.jpg" class="icon iconfont icon-weixin weixin"></a>
+			<a href="#" class="icon iconfont icon-weibo"></a>
+		</div>
+	</div>
+</div>
+<script src="js/plugin.js"></script>
+
+<script src="js/page.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css">
+<script>
+    $(function(){
+        var map = new BMap.Map('map'); 
+        var poi = new BMap.Point(104.065596,30.587667);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+        //创建marker对象
+        var marker = new BMap.Marker(poi, {
+            icon: new BMap.Icon("images/mapi.png", new BMap.Size(22, 26))
+        });
+        //marker可拖拽
+        marker.enableDragging(); 
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        // 点击显示信息面板
+        var content = "<div style='padding: 13px 0;'><p style='font-size: 14px;' class='icon iconfont icon-zuobiao'>&nbsp;成都高新区交子大道177号中国海国际中心A座18层</p></div>";
+        var searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title  : "天府（四川）信用增进股份公司",      //标题
+            width  : 350,             //宽度
+            // height : 50,              //高度
+            panel  : "panel",         //检索结果面板
+            enableAutoPan : true,     //自动平移
+            searchTypes   :[
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        // searchInfoWindow.open(marker);
+        marker.addEventListener("click", function(e){
+            if (!isMobile) { searchInfoWindow.open(marker) }
+        });
+        //在地图中添加marker
+        map.addOverlay(marker); 
+    })
+</script>
+</body>
+</html>
