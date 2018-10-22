@@ -617,8 +617,6 @@ to{width:0}
 .banner-line span{display:block;width:0;height:100%;background:#cfa54f}
 .banner-box{position:relative;overflow:hidden}
 .banner{height:100%}
-.banner .pic2{position:absolute;top:0;left:0}
-.banner .pic2:after{position:absolute;right:0;bottom:0;left:0;height:140px;content:'';background:url(../images/shadow1.png) left top}
 .banner .txts{position:absolute;right:0;bottom:90px;left:0;color:#fff}
 .banner .txts a{color:#fff}
 .banner .txx p{display:inline-block;vertical-align:bottom;white-space:nowrap}

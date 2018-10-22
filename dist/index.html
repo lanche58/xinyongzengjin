@@ -72,23 +72,23 @@
 
 <div class="page-pa">
     <div class="banner-box">
-        <div class="banner u-slick cg-m">
+        <div class="banner u-slick">
             <div class="item">
-                <div class="pic2"><img src="img/banner1.jpg" class="igm" alt=""></div>
+                <div class="pic2"><img src="img/banner1.jpg" alt=""></div>
                 <div class="txts">
                     <div class="txx tac fwb tx1"><a href="#"><p>债券综合服务商</p></a></div>
                     
                 </div>
             </div>
             <div class="item">
-                <div class="pic2"><img src="img/banner2.jpg" class="igm" alt=""></div>
+                <div class="pic2"><img src="img/banner2.jpg" alt=""></div>
                 <div class="txts">
                     <div class="txx tac fwb tx1"><p>债券综合服务商</p></div>
                     
                 </div>
             </div>
         </div>
-        <div class="banner-line"><span></span></div>
+        
     </div>
 </div>
 <div class="container pw">
@@ -287,40 +287,14 @@
 
 <script src="js/page.js"></script>
 <script>
-    function indexBox(){
-        if(!isMobile){
-            $('.banner-box').css({ height: w_height - $mtoph });
-            $('.banner .item').css({ height: w_height - $mtoph });
-            setImgMax($('.banner .pic2'), 1757, 823, $('.banner').width(), w_height - $mtoph);
-        }else{
-            $('.banner').css({ height: 'auto' });
-            $('.banner .item').css({ height: 'auto' });
-            $('.banner .pic2').attr({ 'style': '' });
-        }
-    };
-    indexBox();
-    $(window).resize(function () {
-        indexBox();
-    });
     $(function(){
-        $('.banner-line span').css({width:0}).stop().animate({width:100+'%'},4800,'linear');
-
-        $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
-            $('.banner .item').first().addClass('active');
-        });
-
         var bannerSlick = $('.banner').slick({
             speed: 1000,
             arrows: true,
             dots: false,
             autoplay: true,
             autoplaySpeed: 5000,
-            fade: true,
             pauseOnHover: false
-        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            $('.banner .item').removeClass('active');
-            $('.banner .item').eq(nextSlide).addClass('active');
-            $('.banner-line span').css({width:0}).stop().animate({width:100+'%'},5800,'linear');
         });
 
         $('.inw-pic-list').slick({
